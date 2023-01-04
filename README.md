@@ -1,165 +1,115 @@
-# JATE
+# JATE Just Another Text Editor
 
-## Your Task
+![Express](https://img.shields.io/badge/-Express-blue.svg)
+![Heroku](https://img.shields.io/badge/-Heroku-purple.svg)
+![MIT license](https://img.shields.io/badge/License-MIT-green.svg)
+![badge](https://img.shields.io/github/languages/top/yogibruce/tech-link)
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+## Description
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+JATE is a web-based text editor that runs in the browser. The application features data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application is also available to use offline if the user chooses to install on their local device.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+## Table of Contents
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+- [Installation](#installation)
+- [Heroku](#heroku)
+- [Github Repository](#github-repo)
+- [Screenshot](#screenshot)
+- [Usage](#usage)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-## User Story
+#
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+## Installation
 
-## Acceptance Criteria
+This application requires Node.js as well as various npm package dependencies. To install locally, the user may visit the GitHub repository listed below and clone to their local device. All dependencies are included in NPM package; once installed the user may navigate to their local directory's command line and enter "npm i && npm start". The user may now use the application in their browser's localhost.
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+If the user would like to install application without a git-repository, they may navigate to deployed application below and click "install" button located at top-left of page.
 
-## Mock-Up
+#
 
-The following animation demonstrates the application functionality:
+## Heroku App
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+<a id="heroku"></a>
 
-The following image shows the application's `manifest.json` file:
+#
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+Heroku Link: [Just-ATE](https://dashboard.heroku.com/apps/just-ate)
 
-The following image shows the application's registered service worker:
+#
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+## GitHub Repository
 
-The following image shows the application's IndexedDB storage:
+<a id="github-repo"></a>
+[GitHub Repo: Yogibruce/JATE](https://github.com/YogiBruce/JATE)
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+#
+## Screenshots
+<a id="screenshot"></a>
+<img src="./client/dist/assests/images/jate-screenshot.jpg" width="400px">
+<br>
 
-## Grading Requirements
+## Usage
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+<a id="usage"></a>
 
-This Challenge is graded based on the following criteria:
+#
 
-### Technical Acceptance Criteria: 40%
+This application is built into a client/server structure.
 
-* Satisfies all of the above acceptance criteria plus the following:
+#
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+When user runs installation, they will see the backend server start and the webpack plugins bundle Javascript files.
 
-  * The application works without an internet connection
+#
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+The user will notice this has generated their HTML file, service worker, and manifest file.
 
-  * Bundled with webpack
+#
 
-  * Create a service worker with workbox that Caches static assets
+Next-gen JS allows the text-editor application to function in the browser offline without error. 
 
-  * The application should use babel in order to use async / await
+#
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+The application uses IndexedDB to store and persist data, even if application has been closed.
 
-  * Can be installed as a Progressive Web Application
+#
 
-### Deployment: 32%
+The application is able to be downloaded locally and uses a registered service worker that provides static assets that are pre-cached upon loading.
 
-* Application deployed to Heroku at live URL with build scripts
+#
 
-* Application loads with no errors
+The application is deployed to Heroku with proper build scripts for a webpack application.
 
-* Application GitHub URL submitted
+#
 
-* GitHub repo contains application code
+## Tests
 
-### Application Quality: 15%
+<a id="tests"></a>
+There are no tests for this application.
 
-* Application user experience is intuitive and easy to navigate
+#
 
-* Application user interface style is clean and polished
+### MIT License [vist link](https://choosealicense.com/licenses/mit/)
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
+Copyright 2023 - Robert B Arnold Jr
 
-### Repository Quality: 13%
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-* Repository has a unique name
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-* Repository follows best practices for file structure and naming conventions
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+#
 
-* Repository contains multiple descriptive commit messages
+## Questions
 
-* Repository contains quality README file with description, screenshot, and link to deployed application
+<a id="questions"></a>
 
-## Review
+For any questions regarding this application or any other project by YogiBruce:
 
-You are required to submit the following for review:
+### Email: [Gmail](mailto:da.bruce.jr@gmail.com)
 
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-Browser PWA text editor
-
-MIT License
-
-Copyright (c) 2022 YogiBruce
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Gihub Profile: [YogiBruce](https://github.com/YogiBruce)
