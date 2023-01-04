@@ -36,7 +36,7 @@ If the user would like to install application without a git-repository, they may
 
 #
 
-Heroku Link: [Just-ATE](https://dashboard.heroku.com/apps/just-ate)
+Heroku Link: [Just-ATE](https://just-ate.herokuapp.com/)
 
 #
 
